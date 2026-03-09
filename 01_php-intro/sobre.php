@@ -20,8 +20,8 @@ $pagina_atual = "sobre";
 <?php include "includes/cabecalho.php"; ?>
     <div class="container">
         <h1>Sobre mim</h1>
-        <p>Moro em <strong>Ponta Grossa</strong> e hoje tô no 4º ano de Informática no IFPR. Sendo bem sincera: no começo eu <strong>odiava</strong> o curso. Não via sentido nenhum naquilo, mas com o tempo a chave virou um pouco e eu passei a gostar de como as coisas funcionam.</p>
-        <p>Agora meu foco total tá sendo terminar o técnico e estudar pro <strong>PSS</strong>. Quero garantir minha vaga e fechar esse ciclo da escola do jeito certo.</p>
+        <p>Moro em Ponta Grossa e hoje tô no 3º ano de Informática no IFPR. No começo eu odiava o curso. E ainda não gosto muito quero so concluilo porque o comecei mas não pretendo seguir na area</p>
+        <p>Agora meu foco total tá sendo terminar o técnico e estudar pro PSS. Quero entrar na universidade.</p>
         <a href="index.php" class="btn-voltar">← Voltar ao início</a>
     </div>
     <?php include "includes/rodape.php"; ?>

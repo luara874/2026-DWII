@@ -16,7 +16,7 @@ $nome = "Luara";
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include "includes/cabecalho.php"; ?>
+    <?php include "../includes/cabecalho.php"; ?>
 
     <div class="container">
         <h1>Projetos</h1>

@@ -16,10 +16,10 @@ $pagina_atual = "inicio";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio – <?php echo $nome; ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../includes/style.css">
 </head>
 <body>
-    <?php include "includes/cabecalho.php"; ?>
+    <?php include "../includes/cabecalho.php"; ?>
 
     <div class="nome">
         <h1><?php echo $nome; ?> Munkemer</h1>
@@ -32,6 +32,6 @@ $pagina_atual = "inicio";
            <strong><?php echo date("d/m/Y \às H:i:s"); ?></strong></p>
     </div>
 
-    <?php include "includes/rodape.php"; ?>
+    <?php include "../includes/rodape.php"; ?>
 </body>
 </html>

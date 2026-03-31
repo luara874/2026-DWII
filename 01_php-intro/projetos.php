@@ -6,6 +6,7 @@
 -->
   <?php
 $nome = "Luara";
+$pagina_atual = "Projetos";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +14,10 @@ $nome = "Luara";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - <?php echo $nome; ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../includes/style.css">
 </head>
 <body>
-    <?php include "includes/cabecalho.php"; ?>
+    <?php include "../includes/cabecalho.php"; ?>
 
     <div class="container">
         <h1>Projetos</h1>
@@ -31,6 +32,6 @@ $nome = "Luara";
         <p>Não o fiz mas tenho o interesse de desenvolver um site para uma loja de roupas.</p><br><br><br>
     </div>
 
-    <?php include "includes/rodape.php"; ?>
+    <?php include "../includes/rodape.php"; ?>
 </body>
 </html>

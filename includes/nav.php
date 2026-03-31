@@ -11,6 +11,6 @@ $cor_projetos = ($pagina_atual === "projetos") ? "color: #c5840b; font-weight: b
 ?>
 <nav>
     <a href="index.php" style="<?php echo $cor_inicio; ?>">Início</a>
-    <a href="sobre.php" style="<?php echo $cor_sobre; ?>">Sobre</a>
-    <a href="projetos.php" style="<?php echo $cor_projetos; ?>">Meus Projetos</a>
+    <a href="01_php-intro/sobre.php" style="<?php echo $cor_sobre; ?>">Sobre</a>
+    <a href="01_php-intro/projetos.php" style="<?php echo $cor_projetos; ?>">Meus Projetos</a>
 </nav>

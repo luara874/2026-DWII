@@ -1,16 +1,35 @@
-<!--
-  Disciplina : Desenvolvimento Web II (DWII)
-  Aula       : 03 - PHP Intro
-  Autor      : Luara Munkemer Fornazari
-  Data       : 02/03/2026
--->
 <?php
-$cor_inicio = ($pagina_atual === "inicio")   ? "color: #f0b341; font-weight: bold;" : "color: white;";
-$cor_sobre = ($pagina_atual === "sobre")    ? "color: #f0b341; font-weight: bold;" : "color: white;";
-$cor_projetos = ($pagina_atual === "projetos") ? "color: #c5840b; font-weight: bold;" : "color: white;";
+/**
+ * =======================================================================
+ * ARQUIVO     : includes/cabecalho.php
+ * Disciplina  : Desenvolvimento Web II (2026-DWII)
+ * Aula        : 04 – PHP para Web: Formulários, GET e POST
+ * Autor       : Luara
+ * Conceitos   : Modularização, include, isset(), caminho dinâmico
+ * =======================================================================
+ * * Responsabilidade: gera <meta>, <title>, link para o CSS
+ * externo e inclui o nav.php.
+ * * Variáveis esperadas na página que inclui este arquivo:
+ * $titulo_pagina – string (opcional): texto da aba do navegador
+ * $caminho_raiz  – string: caminho relativo até a raiz do projeto
+ * Ex: '../' para páginas em 01_php-intro/ ou
+ * 02_formularios/ (um nível acima)
+ */
+
+// isset() verifica se a variável foi definida antes de usá-la.
+// Valor padrão ativa caso a página esqueça de declarar $titulo_pagina.
+if (!isset($titulo_pagina)) $titulo_pagina = "Portfólio DWII";
+if (!isset($caminho_raiz))  $caminho_raiz  = "../"; // padrão: um nível acima
 ?>
-<nav>
-    <a href="index.php" style="<?php echo $cor_inicio; ?>">Início</a>
-    <a href="01_php-intro/sobre.php" style="<?php echo $cor_sobre; ?>">Sobre</a>
-    <a href="01_php-intro/projetos.php" style="<?php echo $cor_projetos; ?>">Meus Projetos</a>
-</nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?php echo htmlspecialchars($titulo_pagina); ?></title>
+
+<link rel="stylesheet" href="<?php echo $caminho_raiz; ?>includes/style.css">
+
+<?php
+// __DIR__ é uma constante PHP que retorna o caminho absoluto
+// do diretório onde este arquivo está – garante que o include
+// funciona independente de onde a página que o chamou está.
+include __DIR__ . '/nav.php';
+?>

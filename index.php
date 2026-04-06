@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $nome = "Luara";
 $subtitulo = "Repositório 2026 - Desenvolvimento Web II";
 
@@ -10,7 +13,7 @@ $aulas = [
 "numero" => "00",
 "nome" => "Apresentação Pessoal",
 "descricao" => "Página estática com HTML e CSS com foto de perfil e layout responsivo.",
-"link" => "00_apresentacao/index.html",
+"link" => "./00_apresentacao/index.html",
 "icone" => "👤",
 "cor" => "#667280",
 "conceitos" => "HTML semântico, CSS Flexbox, responsividade"
@@ -20,7 +23,7 @@ $aulas = [
 "numero" => "03",
 "nome" => "Portfólio Dinâmico com PHP",
 "descricao" => "Mini-site de portfólio com variáveis, includes e menu dinâmico.",
-"link" => "01_php-intro/index.php",
+"link" => "01_php-intro/projetos.php",
 "icone" => "💻",
 "cor" => "#3b579d",
 "conceitos" => "Variáveis, echo, include, foreach, operador ternário"
@@ -33,7 +36,26 @@ $aulas = [
 "link" => "02_formularios/contato.php",
 "icone" => "📩",
 "cor" => "#3ba34a",
-"conceitos" => "$_POST, validação, htmlspecialchars(), header() + exit"
+"conceitos" => '$_POST, validação, htmlspecialchars(), header() + exit'
+],
+
+[
+"numero" => "04",
+"nome" => "Login",
+"descricao" => "",
+"link" => "../04_sessoes/login.php",
+"icone" => "📩",
+"cor" => "#3ba34a",
+"conceitos" => '$_POST, validação, htmlspecialchars(), header() + exit'
+],
+[
+"numero" => "05",
+"nome" => "crud",
+"descricao" => "",
+"link" => "../05_crud/index.php",
+"icone" => "💻",
+"cor" => "#3b579d",
+"conceitos" => "Variáveis, echo, include, foreach, operador ternário"
 ]
 
 ];
@@ -101,7 +123,7 @@ Abrir →
 <?php endforeach; ?>
 
 <p style="text-align:right; font-size:13px; color:#9ca3af;">
-Gerado em: <?php echo date("d/m/Y \à\s H:i:s"); ?>
+Gerado em: <?php echo date("d/m/Y H:i:s"); ?>
 </p>
 
 </div>

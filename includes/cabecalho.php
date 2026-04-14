@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<!--
-  Disciplina : Desenvolvimento Web II (DWII)
-  Aula       : 03 - PHP Intro
-  Autor      : Luara Munkemer Fornazari
-  Data       : 02/03/2026
--->
-<?php include "nav.php"; ?>
-=======
 <?php
 /**
  * =======================================================================
@@ -42,4 +33,3 @@ if (!isset($caminho_raiz))  $caminho_raiz  = "../"; // padrão: um nível acima
 // funciona independente de onde a página que o chamou está.
 include __DIR__ . '/nav.php';
 ?>
->>>>>>> 91923e46a0dffeac63121ae2c0db16e44a45bda1

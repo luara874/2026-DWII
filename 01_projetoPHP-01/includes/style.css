@@ -1,0 +1,250 @@
+/* ════════════════════════════════════════
+   CSS GLOBAL + SITE LUARA (UNIFICADO)
+   Estilo moderno, elegante e reutilizável
+════════════════════════════════════════ */
+
+/* ── Reset ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Variáveis ── */
+:root {
+  --roxo: #7c3aed;
+  --roxo-claro: #a78bfa;
+  --rosa: #f472b6;
+  --azul: #3b579d;
+  --fundo: #f3f4f6;
+  --texto: #1f2937;
+  --branco: #ffffff;
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  color: var(--texto);
+  line-height: 1.7;
+  animation: fadeIn 1s ease-in;
+}
+
+/* ── Animação ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Layout padrão ── */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, var(--roxo), var(--rosa));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.header-container h1 {
+  font-size: 40px;
+}
+
+.header-sub {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* ── NAV GLOBAL ── */
+nav {
+  background: #111827;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--rosa);
+}
+
+nav a.ativo {
+  color: var(--rosa);
+  border-bottom: 2px solid var(--rosa);
+}
+
+/* ── SEÇÃO APRESENTAÇÃO ── */
+.apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.apresentacao:hover {
+  transform: translateY(-5px);
+}
+
+/* ── FOTO ── */
+.foto-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-perfil {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--roxo-claro);
+  transition: 0.4s;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+  border-color: var(--rosa);
+}
+
+/* ── TEXTO ── */
+.texto-container {
+  flex: 2;
+}
+
+.texto-container h2 {
+  color: var(--roxo);
+  margin-bottom: 15px;
+}
+
+.texto-container p {
+  color: #374151;
+}
+
+/* ── CARDS (reutilizável) ── */
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--roxo);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ── IMAGENS ── */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* ── FORMULÁRIO ── */
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--roxo);
+  outline: none;
+}
+
+/* ── BOTÃO ── */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: var(--roxo);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--rosa);
+  transform: scale(1.05);
+}
+
+/* ── ALERTAS ── */
+.alerta-erro {
+  background: #ffe6e6;
+  border-left: 5px solid red;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.alerta-sucesso {
+  background: #e6ffe6;
+  border-left: 5px solid green;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+  .apresentacao {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

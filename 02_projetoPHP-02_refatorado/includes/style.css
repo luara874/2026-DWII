@@ -1,0 +1,267 @@
+/* ════════════════════════════════════════════════════════════
+ * Disciplina : Desenvolvimento Web II (DWII)
+ * Projeto    : Portfólio Pessoal — versão refatorada
+ * Arquivo    : includes/style.css
+ * Autor      : [SEU NOME AQUI]
+ * Data       : [DATA DE HOJE]
+ * Escopo     : CSS global unificado — serve todas as páginas
+ *              do projeto. Incorpora os estilos de apresentação
+ *              (anteriormente em 00_apresentacao/style.css).
+ * ════════════════════════════════════════════════════════════ */
+
+/* ── Reset e base ──────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #010000;
+  line-height: 1.7;
+}
+
+/* ── Layout principal ──────────────────────────────────────── */
+/*
+ * .container: centraliza e limita a largura do conteúdo.
+ * Usado pelas páginas de formulário, catálogo e CRUD.
+ */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* main: wrapper do conteúdo principal das páginas */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ── Títulos de seção ──────────────────────────────────────── */
+h1.titulo-secao { color: #3b579d; margin-bottom: 24px; }
+
+/* ── Navegação ─────────────────────────────────────────────── */
+/*
+ * nav: barra de navegação azul no topo de todas as páginas.
+ * Gerada pelo includes/nav.php e estilizada aqui.
+ */
+nav {
+  background: #3b579d;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  padding: 4px 0;
+}
+/* .ativo: item do menu correspondente à página atual
+   Aplicado dinamicamente pelo nav.php via PHP */
+nav a.ativo {
+  color: #f0b341;
+  border-bottom: 2px solid #f0b341;
+}
+
+/* ── Seção de apresentação (homepage) ──────────────────────── */
+/*
+ * Migrado de 00_apresentacao/style.css.
+ * .apresentacao: layout lado a lado (foto + texto).
+ * display: flex coloca os filhos em linha.
+ */
+.apresentacao {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* .foto-container: impede que a foto encolha quando o texto é longo */
+.foto-container { flex-shrink: 0; }
+
+/* .foto-perfil: imagem circular com borda azul */
+.foto-perfil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;   /* torna a imagem circular */
+  object-fit: cover;    /* recorta a imagem sem distorcer */
+  border: 5px solid #3b579d;
+  display: block;
+}
+
+/* .texto-container: ocupa o espaço restante ao lado da foto */
+.texto-container { flex: 1; }
+.texto-container h2 {
+  color: #3b579d;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.texto-container p {
+  color: #010000;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* .info-cards: coluna de cards com informações rápidas */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*
+ * .info-card: cada linha de informação (ícone + texto).
+ * Diferente de .card (card de conteúdo) — por isso o nome distinto.
+ */
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #e8edf5;
+  border-left: 4px solid #3b579d;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.card-icon  { font-size: 18px; flex-shrink: 0; }
+.card-texto { font-size: 14px; color: #010000; }
+
+/* ── Cards de conteúdo ─────────────────────────────────────── */
+/*
+ * .card: usado nas páginas de portfólio (sobre, projetos, contato).
+ * Diferente de .info-card (que é exclusivo da homepage).
+ */
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid #3b579d;
+}
+.card h3 { margin-top: 0; color: #2a4080; margin-bottom: 12px; }
+.card p  { margin-bottom: 0; color: #374151; }
+
+/* ── Formulários ───────────────────────────────────────────── */
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+.formulario { display: block; }
+.campo { margin-bottom: 18px; }
+.label-campo {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #374151;
+}
+.input-texto {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+textarea.input-texto { resize: vertical; }
+
+/* ── Botões ────────────────────────────────────────────────── */
+/* .btn-primario: ação principal (salvar, entrar, confirmar) */
+.btn-primario {
+  display: inline-block;
+  background: #3b579d;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primario:hover { background: #2a4080; }
+
+/* .btn-secundario: ação secundária (cancelar, voltar, ver) */
+.btn-secundario {
+  display: inline-block;
+  background: white;
+  color: #3b579d;
+  border: 2px solid #3b579d;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secundario:hover { background: #e8edf5; }
+
+/* .btn-perigo: ação destrutiva (excluir) */
+.btn-perigo {
+  display: inline-block;
+  background: #cf1c21;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-perigo:hover { background: #a01018; }
+
+/* ── Alertas ───────────────────────────────────────────────── */
+/* .alerta-erro: exibido quando há erros de validação */
+.alerta-erro {
+  background: #fce8e8;
+  border-left: 4px solid #cf1c21;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.alerta-erro h3 { color: #cf1c21; margin-top: 0; }
+
+/* .alerta-sucesso: exibido após operação bem-sucedida */
+.alerta-sucesso {
+  background: #e9f5ea;
+  border-left: 4px solid #3ba34a;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.alerta-sucesso h3 { color: #3ba34a; margin-top: 0; }
+
+/* ── Rodapé ────────────────────────────────────────────────── */
+footer {
+  background: #010000;
+  color: #6b7280;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ── Responsividade ────────────────────────────────────────── */
+/*
+ * Em telas menores que 650px, o layout lado a lado da homepage
+ * vira coluna única (foto em cima, texto em baixo).
+ */
+@media (max-width: 650px) {
+  .apresentacao {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .info-card { justify-content: center; }
+}
